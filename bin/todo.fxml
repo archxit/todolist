@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="702.0" prefWidth="459.0" stylesheets="@todo.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TodoController">
+   
+    <padding>
+        <Insets bottom="20" left="20" right="20" top="20" />
+    </padding>
+
+    <HBox fx:id="counter" alignment="CENTER_LEFT" prefHeight="103.0" prefWidth="419.0" spacing="10" styleClass="counter" stylesheets="@todo.css">
+        <Label prefHeight="124.0" prefWidth="248.0" styleClass="todo-header" stylesheets="@todo.css" text="Tasks Done">
+         <HBox.margin>
+            <Insets />
+         </HBox.margin>
+         <font>
+            <Font name="Times New Roman" size="25.0" />
+         </font>
+         <padding>
+            <Insets left="20.0" />
+         </padding></Label>
+      <StackPane prefHeight="150.0" prefWidth="200.0">
+         <children>
+            <Circle fill="#ff7043" radius="60.0" stroke="BLACK" strokeType="INSIDE">
+               <StackPane.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </StackPane.margin>
+            </Circle>
+              <Label fx:id="progressLabel" alignment="CENTER" prefHeight="81.0" prefWidth="96.0" styleClass="progress-label" textAlignment="CENTER">
+               <font>
+                  <Font size="48.0" />
+               </font>
+               <padding>
+                  <Insets left="5.0" right="10.0" />
+               </padding>
+               <StackPane.margin>
+                  <Insets left="5.0" />
+               </StackPane.margin>
+            </Label>
+         </children>
+      </StackPane>
+    </HBox>
+
+    <HBox alignment="CENTER_LEFT" prefHeight="43.0" prefWidth="251.0" spacing="10">
+        <TextField fx:id="taskInput" prefHeight="33.0" prefWidth="157.0" promptText="write your next task" HBox.hgrow="ALWAYS">
+         <HBox.margin>
+            <Insets left="25.0" right="30.0" top="18.0" />
+         </HBox.margin></TextField>
+      <StackPane prefHeight="48.0" prefWidth="23.0">
+         <children>
+              <Button fx:id="addButton" onAction="#handleAddTask" styleClass="add-button">
+               <graphic>
+                  <ImageView fitHeight="42.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true" styleClass="add-icon">
+                     <image>
+                        <Image url="@add-btn.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+         <HBox.margin>
+            <Insets right="35.0" top="18.0" />
+         </HBox.margin>
+      </StackPane>
+      <VBox.margin>
+         <Insets />
+      </VBox.margin>
+    </HBox>
+   <StackPane prefHeight="497.0" prefWidth="419.0">
+      <VBox.margin>
+         <Insets top="20.0" />
+      </VBox.margin>
+      <children>
+      
+                      <ScrollPane fx:id="scrlpane" fitToHeight="true" fitToWidth="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="scrlPane" stylesheets="@todo.css">
+            <StackPane.margin>
+               <Insets />
+            </StackPane.margin>
+            <content>
+                 <VBox fx:id="taskContainer" spacing="8.0" styleClass="taskContainer" stylesheets="@todo.css">
+                  <padding>
+                     <Insets left="8.0" right="8.0" top="8.0" />
+                  </padding>
+               </VBox>
+            </content>
+          </ScrollPane>
+      </children>
+   </StackPane>
+</VBox>
