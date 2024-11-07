@@ -1,4 +1,5 @@
 /* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
 .root {
     -fx-background-color: #1E1E1E;
     -fx-text-fill: white;
@@ -16,15 +17,15 @@
     -fx-color-fill : #FF7043;
     -fx-text-fill: rgb(0, 0, 0);
     -fx-font-size: 30px;
-    -fx-font-family: Helvetica, Arial, sans-serif;
+    -fx-font-family: 'Roboto', sans-serif; 
     -fx-text-align: right;
     -fx-font-weight: bold; 
 }
 
 .todo-header {
     -fx-text-fill: #FFFAF0;
-    -fx-font-family: Helvetica, Arial, sans-serif;
-    -fx-font-size: 18px;
+    font-family:'Roboto', sans-serif; 
+    -fx-font-size: 25px;
     -fx-font-weight: bold;
 }
 
@@ -133,4 +134,12 @@ ScrollPane > *
 {
     -fx-border-color: transparent;
     -fx-border-width: 0px;
+}
+.exitHbox
+{
+    -fx-background-color: transparent;
+}
+.exitBtn
+{
+    -fx-background-color: transparent;
 }

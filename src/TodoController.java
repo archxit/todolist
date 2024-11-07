@@ -9,6 +9,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
 import javafx.scene.shape.SVGPath;
+import javafx.stage.Stage;
 
 import java.util.concurrent.*;
 
@@ -33,6 +34,7 @@ public class TodoController {
         loadTasks();
         setupTaskList();
         setupAddButton();
+        progressLabel.setText(0+ "/" + 0);
     }
 
     private void setupAddButton() {
@@ -136,5 +138,9 @@ public class TodoController {
             scheduledExecutor.shutdownNow();
             Thread.currentThread().interrupt();
         }
+    }
+    public void exit()
+    {
+        System.exit(0);
     }
 }

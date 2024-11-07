@@ -13,11 +13,30 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="702.0" prefWidth="459.0" stylesheets="@todo.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TodoController">
+<VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="732.0" prefWidth="459.0" stylesheets="@todo.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TodoController">
    
     <padding>
         <Insets bottom="20" left="20" right="20" top="20" />
     </padding>
+   <HBox alignment="TOP_RIGHT" prefHeight="50.0" prefWidth="419.0">
+      <children>
+         <Button fx:id="exitbtn" mnemonicParsing="false" onAction="#exit" styleClass="exitBtn" stylesheets="@todo.css">
+            <graphic>
+               <ImageView fx:id="exitbtn" fitHeight="21.0" fitWidth="141.0" nodeOrientation="INHERIT" onDragDetected="#exit" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@exit.png" />
+                  </image>
+               </ImageView>
+            </graphic>
+            <HBox.margin>
+               <Insets right="10.0" top="5.0" />
+            </HBox.margin>
+         </Button>
+      </children>
+      <VBox.margin>
+         <Insets bottom="15.0" />
+      </VBox.margin>
+   </HBox>
 
     <HBox fx:id="counter" alignment="CENTER_LEFT" prefHeight="103.0" prefWidth="419.0" spacing="10" styleClass="counter" stylesheets="@todo.css">
         <Label prefHeight="124.0" prefWidth="248.0" styleClass="todo-header" stylesheets="@todo.css" text="Tasks Done">
@@ -49,6 +68,9 @@
                </StackPane.margin>
             </Label>
          </children>
+         <padding>
+            <Insets left="15.0" />
+         </padding>
       </StackPane>
     </HBox>
 
